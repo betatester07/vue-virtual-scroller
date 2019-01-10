@@ -91,6 +91,12 @@ export default {
       return result
     },
 
+    itemsWithHeightWatch () {
+      let itemsWithHeight = this.itemsWithHeight
+      this.forceUpdate()
+      return itemsWithHeight
+    },
+
     listeners () {
       const listeners = {}
       for (const key in this.$listeners) {
@@ -100,10 +106,6 @@ export default {
       }
       return listeners
     },
-  },
-
-  watch: {
-    items: 'forceUpdate',
   },
 
   created () {
